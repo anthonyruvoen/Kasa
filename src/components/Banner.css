@@ -1,0 +1,24 @@
+.banner {
+    position: relative;
+    max-width: 1240px;
+    height: 223px;
+    background-image: url('/public/IMG1.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    color: white;
+    margin: 40px 0 40px 0;
+}
+.banner::before {
+    position: absolute;
+    border-radius: 2rem;
+    content: "";
+    inset: 0;
+    background-color: black;
+    opacity: 0.3;
+}
+h2 {
+    z-index: 1;
+}

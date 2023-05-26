@@ -1,0 +1,21 @@
+.appartment {
+    background-image: linear-gradient(180deg, #FF6060 0%, #863535 100%);
+    border-radius: 10px;
+    flex-basis: 30%;
+    display: grid;
+    align-items: end;
+    min-width: 200px;
+    min-height: 200px;
+}
+.appartment_title {
+    width: 50%;
+    font-size: 12px;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 690px) {
+    .appartment {
+        flex-basis: 100%;
+    }
+}

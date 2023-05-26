@@ -1,0 +1,53 @@
+.appartment-information-owner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.appartment-information, .appartment-owner {
+    color: #FF6060;
+}
+#stars .grey {
+    color: #E3E3E3;
+}
+.appartment-information h1 {
+    margin-bottom: 0;    
+}
+.keywords {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.keywords span {
+    display: flex;
+    color: white;
+    background-color: #FF6060;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    width: 115px;
+    justify-content: center;
+}
+.owner-name-pic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#owner {
+    width: 110px;
+    font-size: 18px;
+    text-align: right;
+    margin-right: 20px;
+}
+#pic {
+    width: 64px;
+    height: 64px;
+    background-color: #C4C4C4;
+    border-radius: 50px;
+}
+#stars {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    text-align: right;
+    padding: 0;
+}
