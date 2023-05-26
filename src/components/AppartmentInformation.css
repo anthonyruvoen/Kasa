@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 1240px;
 }
 .appartment-information, .appartment-owner {
     color: #FF6060;
@@ -27,6 +28,11 @@
     width: 115px;
     justify-content: center;
 }
+.appartment-owner {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
 .owner-name-pic {
     display: flex;
     flex-direction: row;
@@ -47,7 +53,22 @@
 #stars {
     display: flex;
     justify-content: space-between;
-    width: 120px;
-    text-align: right;
-    padding: 0;
+    gap: 5px;
+    width: 150px;
+    margin-top: 10px;
+    font-size: 20px;
 }
+
+@media screen and (max-width: 912px) {
+    
+    .appartment-information-owner {
+        flex-direction: column;
+    }
+    .appartment-owner {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+};
+    

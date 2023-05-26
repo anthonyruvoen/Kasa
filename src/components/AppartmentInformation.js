@@ -19,11 +19,11 @@ const AppartmentInformation = () => {
                     <div id="pic"></div>
                 </div>
                 <div id="stars">
-                    <span><i class="fa-solid fa-star red"></i></span>
-                    <span><i class="fa-solid fa-star red"></i></span>
-                    <span><i class="fa-solid fa-star red"></i></span>
-                    <span><i class="fa-solid fa-star grey"></i></span>
-                    <span><i class="fa-solid fa-star grey"></i></span>
+                    <span><i className="fa-solid fa-star red"></i></span>
+                    <span><i className="fa-solid fa-star red"></i></span>
+                    <span><i className="fa-solid fa-star red"></i></span>
+                    <span><i className="fa-solid fa-star grey"></i></span>
+                    <span><i className="fa-solid fa-star grey"></i></span>
                 </div>
             </div>
         </div>

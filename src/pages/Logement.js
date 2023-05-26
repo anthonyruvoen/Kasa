@@ -2,8 +2,9 @@ import React from 'react';
 import Navigation from '../components/Navbar';
 import Slideshow from '../components/Slideshow';
 import AppartmentInformation from '../components/AppartmentInformation';
-import AppartmentDescription from '../components/AppartmentDescription';
+import Collapse from '../components/Collapse';
 import Footer from '../components/Footer';
+import './Logement.css';
 
 const Logement = () => {
     return (
@@ -11,7 +12,10 @@ const Logement = () => {
         <Navigation />
         <Slideshow />
         <AppartmentInformation />
-        <AppartmentDescription />
+        <div className="description">
+            <Collapse />
+            <Collapse />
+        </div>
         <Footer />
         </div>
     );
