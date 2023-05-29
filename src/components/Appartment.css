@@ -1,16 +1,17 @@
 .appartment {
-    display: flex;
     flex-basis: 30%;
     border-radius: 10px;
-    align-items: end;
     min-width: 200px;
     min-height: 200px;
     background-size: cover;
 }
 .appartment-card {
+    display: flex;
+    flex-direction: column-reverse;
     position: relative;
+    height: 200px;
 }
-.appartment img {
+.appartment-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -21,6 +22,7 @@
     width: 50%;
     font-size: 12px;
     color: white;
+    background-color: rgba(0,0,0,.5);
     margin-left: 10px;
     margin-bottom: 10px;
 }
