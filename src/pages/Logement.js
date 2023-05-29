@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navbar';
 import Slideshow from '../components/Slideshow';
-import AppartmentInformation from '../components/AppartmentInformation';
+import ApartmentInformation from '../components/ApartmentInformation';
 import Collapse from '../components/Collapse';
 import Footer from '../components/Footer';
 import './Logement.css';
+import { useLocation } from 'react-router-dom';
 
 const Logement = () => {
+    const location = useLocation();
+    const [flat, setFlat] = useState(null);
+    useEffect(fetchApartmentData, []);
+
+    function fetchApartmentData() {
+        fetch('logements.json')
+            .then((res) => res.json())
+            .then((flats) => {
+                const flat = flats.find((flat) => flat.id === location.state.apartmentId);
+                setFlat(flat);
+    })
+            .catch(console.error);
+    }
+    if (flat == null) return <div>Chargement...</div>;
     return (
-        <div>
+        <div className='apartment-page'>
         <Navigation />
-        <Slideshow />
-        <AppartmentInformation />
+        <Slideshow imageUrl={flat.cover}/>
+        <ApartmentInformation flat={flat}/>
         <div className="description">
-            <Collapse />
-            <Collapse />
+            <Collapse title='Description' content={flat.description}/>
+            <Collapse title='Equipements' content={flat.equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}/>
         </div>
         <Footer />
         </div>

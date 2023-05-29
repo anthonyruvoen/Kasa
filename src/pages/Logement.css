@@ -1,5 +1,14 @@
 .description {
     display: flex;
+    max-width: 1240px;
     gap: 60px;
     margin-top: 30px;
+}
+.description > * {
+    flex-basis: 50%;
+}
+@media screen and (max-width: 690px) {
+    .description {
+        flex-direction: column;
+    }
 }

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './AppartmentList.css';
-import Appartment from './Appartment.js';
+import './ApartmentList.css';
+import Apartment from './Apartment.js';
 
 
-const AppartmentList = () => {
+const ApartmentList = () => {
     const [apartments, setApartments] = useState([]);
 
     useEffect(fetchApartments, []);
@@ -17,10 +17,10 @@ const AppartmentList = () => {
     return (
         <div className='list'>
             {apartments.map((apartment) => (
-            <Appartment title={apartment.title} imageUrl={apartment.cover} />
+            <Apartment key={apartment} title={apartment.title} imageUrl={apartment.cover} id={apartment.id} />
                 ))}
         </div>
     );
 };
 
-export default AppartmentList;
+export default ApartmentList;

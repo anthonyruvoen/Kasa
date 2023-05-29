@@ -1,22 +1,20 @@
-.appartment-information-owner {
+.apartment-information-owner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 1240px;
 }
-.appartment-information, .appartment-owner {
+.apartment-information h1, .apartment-information p, .apartment-owner h1 {
     color: #FF6060;
 }
-#stars .grey {
-    color: #E3E3E3;
-}
-.appartment-information h1 {
+.apartment-information h1 {
     margin-bottom: 0;    
 }
 .keywords {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
+    max-width: 70%;
 }
 .keywords span {
     display: flex;
@@ -25,10 +23,12 @@
     border-radius: 10px;
     margin-right: 10px;
     padding: 5px;
-    width: 115px;
+    width: 100%;
     justify-content: center;
+    font-size: 14px;
+    align-items: center;
 }
-.appartment-owner {
+.apartment-owner {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -44,7 +44,7 @@
     text-align: right;
     margin-right: 20px;
 }
-#pic {
+#pic img {
     width: 64px;
     height: 64px;
     background-color: #C4C4C4;
@@ -57,14 +57,18 @@
     width: 150px;
     margin-top: 10px;
     font-size: 20px;
+    color: #E3E3E3;
+}
+#stars .red {
+    color: #FF6060;
 }
 
 @media screen and (max-width: 912px) {
     
-    .appartment-information-owner {
+    .apartment-information-owner {
         flex-direction: column;
     }
-    .appartment-owner {
+    .apartment-owner {
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;

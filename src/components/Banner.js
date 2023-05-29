@@ -4,7 +4,10 @@ import './Banner.css';
 const Banner = () => {
     return (
         <div className='banner'>
-            <h2>Chez vous, partout et ailleurs</h2>
+            <div className='banner-img'>
+                <img src="IMG1.png" alt="bannière" />
+                <h2>Chez vous, partout et ailleurs</h2>
+            </div>
         </div>
     );
 };

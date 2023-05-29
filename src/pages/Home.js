@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navbar';
 import Banner from '../components/Banner';
-import AppartmentList from '../components/AppartmentList';
+import ApartmentList from '../components/ApartmentList';
 import Footer from '../components/Footer';
 
 
@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <Navigation />
             <Banner />
-            <AppartmentList />
+            <ApartmentList />
             <Footer />
         </div>
     );
