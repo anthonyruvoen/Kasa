@@ -25,7 +25,7 @@ const Logement = () => {
     return (
         <div className='apartment-page'>
         <Navigation />
-        <Slideshow imageUrl={flat.cover}/>
+        <Slideshow pictures={flat.pictures}/>
         <ApartmentInformation flat={flat}/>
         <div className="description">
             <Collapse title='Description' content={flat.description}/>

@@ -1,8 +1,8 @@
-.banner-img {
+.banner {
     position: relative;
     max-width: 1240px;
     height: 223px;
-    /* background-image: url('/public/IMG1.png'); */
+    background-image: url('/public/IMG1.png');
     background-position: center;
     background-size: cover;
     border-radius: 25px;
