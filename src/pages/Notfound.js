@@ -6,9 +6,9 @@ import './Notfound.css';
 
 const Notfound = () => {
     return (
-        <div>
+        <div className="notfound">
             <Navbar />
-            <div className="notfound">
+            <div className="notfound-text">
             <h1>404</h1>
             <p>Oups! La page que vous demandez n'existe pas.</p>
             <NavLink to="/"><div>Retourner sur la page d'accueil</div></NavLink>

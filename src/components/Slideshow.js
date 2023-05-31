@@ -11,7 +11,7 @@ const getClassName = (i) => {
     return "";
 };
     const moveToNext = () => {
-        setCurrentPicture((currentPicture + 1) % pictures.length);
+            setCurrentPicture((currentPicture + 1) % pictures.length);
     }
     const moveToPrevious = () => {
         const newCurrentPicture = currentPicture - 1;
@@ -42,9 +42,10 @@ const getClassName = (i) => {
             <div className="slideshow-container">
             {getCarouselOrAbout()}
             </div>
-                {arePicturesAvailable() && (
+                {arePicturesAvailable() && (pictures.length > 1) && (
                 <div>
                     <button className="btn btn-previous" onClick={moveToPrevious}><i className="fas fa-chevron-left"></i></button>
+                    <span className="slide-counter">{currentPicture + 1} / {pictures.length}</span>
                     <button className="btn btn-next" onClick={moveToNext}><i className="fas fa-chevron-right"></i></button>
                 </div>
                 )}

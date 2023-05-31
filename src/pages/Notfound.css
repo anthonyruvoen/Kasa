@@ -1,22 +1,31 @@
-.notfound {
+.notfound-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #FF6060;
+    width: auto;
 }
-.notfound h1 {
-    font-size: 200px;
+.notfound-text h1 {
+    font-size: 160px;
     font-weight: 800;
-    margin: 0;
+    margin: 100px;
 }
-.notfound p {
+.notfound-text p {
     font-size: 26px;
     font-weight: 500;
 }
-.notfound a {
+.notfound-text a {
     color: #FF6060;
     text-decoration: none;
+    margin-bottom: 100px;
 }
-.notfound a:hover {
+.notfound-text a:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 1400px) {
+
+    .notfound {
+        width: 1240px;
+    }
 }

@@ -3,7 +3,7 @@ import './Collapse.css';
 
 const Collapse = (props) => {
 
-    const [isContentVisible, setIsContentVisible] = useState(false);
+    const [isContentVisible, setIsContentVisible] = useState(true);
     const showContent = () => {
         setIsContentVisible(!isContentVisible);
     };

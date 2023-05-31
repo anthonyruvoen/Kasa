@@ -7,6 +7,7 @@
 }
 .about-collapse {
     display: flex;
+    max-width: 1240px;
     flex-direction: column;
     gap: 15px;
 }

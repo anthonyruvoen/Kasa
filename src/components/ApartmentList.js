@@ -17,7 +17,7 @@ const ApartmentList = () => {
     return (
         <div className='list'>
             {apartments.map((apartment) => (
-            <Apartment key={apartment} title={apartment.title} imageUrl={apartment.cover} id={apartment.id} />
+            <Apartment key={apartment.id} title={apartment.title} imageUrl={apartment.cover} id={apartment.id} />
                 ))}
         </div>
     );

@@ -3,6 +3,14 @@
     border-radius: 15px;
     margin: 40px 0 40px 0;
 }
+.slideshow .slide-counter {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
 .slideshow-container {
     max-width: 1240px;
     height: 415px;
