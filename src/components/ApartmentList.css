@@ -1,8 +1,8 @@
 .list {
     max-width: 1180px;
     background-color: #F6F6F6;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     min-height: 200px;
     border-radius: 25px;
     gap: 1rem;
@@ -10,9 +10,10 @@
     justify-content: space-between;
 }
 
-@media screen and (min-width: 691px), (max-width: 900px) {
+@media screen and (min-width: 691px) and (max-width: 900px) {
     .list {
         justify-content: center;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -20,5 +21,6 @@
     .list {
         background-color: white;
         padding: 0;
+        grid-template-columns: 1fr;
     }
 }

@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 
 const Logement = () => {
     const location = useLocation();
-    const [flat, setFlat] = useState(null);
+    const [flat, setFlat] = useState();
     useEffect(fetchApartmentData, []);
 
     function fetchApartmentData() {
@@ -21,8 +21,7 @@ const Logement = () => {
     })
             .catch(console.error);
     }
-    if (flat == null) return <div>Chargement...</div>;
-    return (
+    if (flat) return (
         <div className='apartment-page'>
         <Navigation />
         <Slideshow pictures={flat.pictures}/>
