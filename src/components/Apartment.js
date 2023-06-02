@@ -8,6 +8,7 @@ const Apartment = (props) => {
        <div className="apartment">
         <NavLink to={'/Logement'+'?_id='+props.id} state={{apartmentId: props.id}}>                  
         <div className="apartment-card">
+                    <div className="gradient"></div>
                     <img src={props.imageUrl} alt={props.title} />
                     <div className="apartment_title">{props.title}</div>
                 </div>
