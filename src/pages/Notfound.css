@@ -1,3 +1,7 @@
+.notfound {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
 .notfound-text {
     display: flex;
     flex-direction: column;

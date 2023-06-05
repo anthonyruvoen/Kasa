@@ -12,31 +12,30 @@ const Logement = () => {
         
         const location = useLocation();
         const [flat, setFlat] = useState();
+        
         useEffect(fetchApartmentData, []);
 
         function fetchApartmentData() {
             fetch('logements.json')
                 .then((res) => res.json())
                 .then((flats) => {
-
-                        const flat = flats.find((flat) => flat.id === location.state.apartmentId);
-                        if (flat.id === undefined) {
-                            return (
-                            <Notfound />
-                            )
-                        }
-                        else {
-                            setFlat(flat)};
+                        const flat = flats.find((flat) => flat.id === location.state?.apartmentId);
+                        setFlat(flat);
                     });
-            };
-            if (flat) return (
-                    <div className='apartment-page'>
+                }
+            if ( flat == null) return <Notfound />;
+            const pictures = flat["pictures"] || [];
+            const description = flat ["description"] || { title: "", content: "" };
+            const equipments = Array.isArray(flat["equipments"]) ? flat["equipments"] : [];
+
+            return (
+                <div className='apartment-page'>
             <Navigation />
-            <Slideshow pictures={flat.pictures}/>
+            <Slideshow pictures={pictures}/>
             <ApartmentInformation flat={flat}/>
             <div className="description">
-                <Collapse title='Description' content={flat.description}/>
-                <Collapse title='Equipements' content={flat.equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}/>
+                <Collapse title='Description' content={description}/>
+                <Collapse title='Equipements' content={equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}/>
             </div>
             <Footer />
             </div>)
